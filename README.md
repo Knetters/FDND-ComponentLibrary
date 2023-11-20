@@ -2,7 +2,7 @@
 # SPAT-Water💧
 
 ## Beschrijving 📃
-Ontwerp en maak een component / website voor een opdrachtgever op basis van een bestaande Headless CMS API. 
+Ontwikkel een website voor een opdrachtgever op basis van een component library.
 
 ![mockup3](https://github.com/sannevanseeventer/SPATwater-2.0/assets/112857444/e668acea-201f-4391-be72-2eb91ce4367d)
 
