@@ -104,6 +104,9 @@
         }
     });
 
+
+    // Mobile filter
+
     // Get the search input element
     const mobileSearchInput = document.getElementById('mobileProjectSearch');
 

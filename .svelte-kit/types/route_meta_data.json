@@ -2,6 +2,7 @@
 	"/": [
 		"src/routes/+page.server.js"
 	],
+	"/kaart": [],
 	"/post/[slug]": [
 		"src/routes/post/[slug]/+page.server.js"
 	],
