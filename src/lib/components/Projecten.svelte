@@ -68,36 +68,76 @@
       });
     });
 
+    // Get the search input element
+    const searchInput = document.getElementById('projectSearch');
 
+    // Get all the <li> elements within the project list
+    const projectItems = document.querySelectorAll('#desktopFilterMe li');
 
-    // Add a click event listener to the list items to toggle the "active" class
-    var listItems = document.querySelectorAll('#filterList li');
+    // Get the message element
+    const noResultsMessage = document.getElementById('noResultsMessage');
 
-    listItems.forEach(function (item) {
-      item.addEventListener('click', function () {
-        // Remove the "active" class from all list items
-        listItems.forEach(function (li) {
-          li.classList.remove('active');
+    // Add an event listener for input changes
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        let hasResults = false;
+
+        // Loop through each <li> element
+        projectItems.forEach(function(item) {
+            const titleElement = item.querySelector('h3');
+            const title = titleElement.textContent.toLowerCase();
+
+            // Check if the search term matches the title of the project
+            if (title.includes(searchTerm)) {
+                item.style.display = 'block'; // Show the matching project
+                hasResults = true;
+            } else {
+                item.style.display = 'none'; // Hide non-matching projects
+            }
         });
 
-        // Add the "active" class to the clicked list item
-        this.classList.add('active');
-      });
+        // Show/hide no results message
+        if (hasResults) {
+            noResultsMessage.style.display = 'none';
+        } else {
+            noResultsMessage.style.display = 'block';
+        }
     });
 
-    // Add mobile logic for the same function as above
-    var listItemsMobile = document.querySelectorAll('#filterList-mobile li');
+    // Get the search input element
+    const mobileSearchInput = document.getElementById('mobileProjectSearch');
 
-    listItemsMobile.forEach(function (item) {
-      item.addEventListener('click', function () {
-        // Remove the "active" class from all list items
-        listItemsMobile.forEach(function (li) {
-          li.classList.remove('active');
+    // Get all the <li> elements within the project list
+    const mobileProjectItems = document.querySelectorAll('#mobileFilterMe li');
+
+    // Get the message element
+    const mobileNoResultsMessage = document.getElementById('mobilenoResultsMessage');
+
+    // Add an event listener for input changes
+    mobileSearchInput.addEventListener('input', function() {
+        const searchTerm = mobileSearchInput.value.toLowerCase();
+        let hasResults = false;
+
+        // Loop through each <li> element
+          mobileProjectItems.forEach(function(item) {
+            const titleElement = item.querySelector('h3');
+            const title = titleElement.textContent.toLowerCase();
+
+            // Check if the search term matches the title of the project
+            if (title.includes(searchTerm)) {
+                item.style.display = 'block'; // Show the matching project
+                hasResults = true;
+            } else {
+                item.style.display = 'none'; // Hide non-matching projects
+            }
         });
 
-        // Add the "active" class to the clicked list item
-        this.classList.add('active');
-      });
+        // Show/hide no results message
+        if (hasResults) {
+          mobileNoResultsMessage.style.display = 'none';
+        } else {
+          mobileNoResultsMessage.style.display = 'block';
+        }
     });
 
   });
@@ -109,11 +149,12 @@
   <div class="mobile-project-header">
     <h2>Projecten</h2>
     <ul class="filter-item-list" id="filterList-mobile">      
-      <li class="active">Klimaatadaptatie</li>
+      <li class="active">Alles</li>
+      <li>Klimaatadaptatie</li>
       <li>Waterkwaliteit</li>
       <li>B-RAIN</li>
     </ul>
-    <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
+    <input class="searchbar" type="search" id="mobileProjectSearch" name="search" placeholder="Zoek een project"/>
   </div>
 
   <!-- Desktop filter lijst -->
@@ -124,15 +165,16 @@
         <div class="filter-row">
           <h2>Projecten</h2>
           <ul class="filter-item-list" id="filterList">
-            <li class="active">Klimaatadaptatie</li>
+            <li class="active">Alles</li>
+            <li>Klimaatadaptatie</li>
             <li>Waterkwaliteit</li>
             <li>B-RAIN</li>
           </ul>
-          <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
+          <input class="searchbar" type="search" id="projectSearch" name="search" placeholder="Zoek een project"/>
         </div>
   
         <div class="project-list-container">
-          <ul class="project-list">
+          <ul class="project-list" id="desktopFilterMe">
             <!-- Loop voor de desktop versie -->
             {#each data.projectens as project }
                 <a href="/projecten/{project.slug}">
@@ -150,16 +192,17 @@
                 </a>
             {/each}
           </ul>
+          <p id="noResultsMessage" style="display: none;">Geen resultaten gevonden.</p>
         </div>
       </div>
 
     </article>
     <div class="mobile-porject-list">
-      <ul>
+      <ul id="mobileFilterMe">
         <!-- Loop voor de mobile versie -->
         {#each data.projectens as project }
           <a href="/projecten/{project.slug}">
-            <li id="{project.slug}-mobile">
+            <li id="{project.categorie}-mobile">
               <div class="horizontal-flex">
                 <img src="{project.image.url}" alt="">
                 <div class="project-text">
@@ -172,6 +215,7 @@
           </a>
         {/each}
       </ul>
+      <p id="mobilenoResultsMessage" style="display: none;">Geen resultaten gevonden.</p>
     </div>
     <article class="project-map">
       <div id="map"></div>
