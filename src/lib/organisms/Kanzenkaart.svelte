@@ -8,7 +8,7 @@
         var map = L.map('map', {
             center: [52.360956, 4.8964073],
             zoom: 10,
-            minZoom: 2
+            minZoom: 8
         });
 
         // Leaflet map theme
