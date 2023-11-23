@@ -53,8 +53,9 @@
 
   img {
     height: 20rem;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: .5rem;
+    width: 100%;
   }
 
   /* Mobiele weergaven */

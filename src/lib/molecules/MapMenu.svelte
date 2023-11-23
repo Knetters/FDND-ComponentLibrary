@@ -3,16 +3,6 @@
   
     onMount(() => {
 
-        // Setting up map
-        var map = L.map('map', {
-            center: [52.360956, 4.8964073],
-            zoom: 10,
-            minZoom: 8
-        });
-
-        // Leaflet map theme
-        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',).addTo(map);
-
         // menu logic
         const mapMenu = document.getElementById("map-menu")
         const menuList = document.getElementById("menu-list")
@@ -51,40 +41,31 @@
         }
     }); 
 </script>
-  
-<section id="map">
-    <div id="map-menu" class="map-menu">
-        <div class="text-block">
-            <h1>Kanzenkaart</h1>
-            <p id="menu-text">Kleine regel tekst met uitleg over de kaart</p>
-        </div>
-        <div class="action-block">
-            <p id="min" class="menu-icon">Verbergen</p>
-            <p id="plus" class="menu-icon">Opties</p>
-            <ul id="menu-list">
-                <li>Filteroptie</li>
-                <li>Filteroptie</li>
-                <li>Filteroptie</li>
-                <li class="active">Filteroptie</li>
-            </ul>
-        </div>
-    </div>
-</section>
-  
-<style>
-    section {
-        height: 92vh;
-        width: 100vw;
-        margin-top: 8vh;
-        position: absolute;
-    }
 
+<div id="map-menu" class="map-menu">
+    <div class="text-block">
+        <h1>Kanzenkaart</h1>
+        <p id="menu-text">Kleine regel tekst met uitleg over de kaart</p>
+    </div>
+    <div class="action-block">
+        <p id="min" class="menu-icon">Verbergen</p>
+        <p id="plus" class="menu-icon">Opties</p>
+        <ul id="menu-list">
+            <li>Filteroptie</li>
+            <li>Filteroptie</li>
+            <li>Filteroptie</li>
+            <li class="active">Filteroptie</li>
+        </ul>
+    </div>
+</div>
+
+<style>
     .map-menu {
         background-color: #fdfdfd;
         height: 5rem;
         width: 90%;
         margin-left: 5%;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
         padding: .5rem 1rem;
         border-radius: 1rem;
         position: relative;
