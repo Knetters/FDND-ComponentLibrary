@@ -27,6 +27,15 @@
 
         const infoTitle = document.getElementById('infoTitle');
 
+        const value0 = document.getElementById('value0');
+        const value1 = document.getElementById('value1');
+        const value2 = document.getElementById('value2');
+        const value3 = document.getElementById('value3');
+        const value4 = document.getElementById('value4');
+        const value5 = document.getElementById('value5');
+        const value6 = document.getElementById('value6');
+        const value7 = document.getElementById('value7');
+
         document.getElementById('hide').addEventListener("click", hideInfo);
 
         function hideInfo() {
@@ -44,6 +53,15 @@
                 // Function to update the panel content based on marker data
                 function updateInfoPanel(feature) {
                     infoTitle.innerHTML = `${feature.properties.Naam}`;
+
+                    // value0.innerHTML = `${feature.properties.Naam}`;
+                    // value1.innerHTML = `${feature.properties.Naam}`;
+                    // value2.innerHTML = `${feature.properties.Naam}`;
+                    // value3.innerHTML = `${feature.properties.Naam}`;
+                    // value4.innerHTML = `${feature.properties.Naam}`;
+                    // value5.innerHTML = `${feature.properties.Naam}`;
+                    // value6.innerHTML = `${feature.properties.Naam}`;
+                    // value7.innerHTML = `${feature.properties.Naam}`;
                 }
 
                 // Looping through the features
@@ -81,6 +99,42 @@
                 console.log('Error fetching data:', error);
             });
 
+            // Get all list items
+            const menuItems = document.querySelectorAll('#menu-list li');
+        
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    menuItems.forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    this.classList.add('active');
+
+                    const location = this.getAttribute('data-location');
+                    
+                    if (location === 'amsterdam') {
+                        // Change the map view for Utrecht
+                        map.setView([52.3547418, 4.8215606], 12);
+                    }
+
+                    if (location === 'den-haag') {
+                        // Change the map view for Utrecht
+                        map.setView([52.071731, 4.2274685], 12);
+                    }
+
+                    if (location === 'rotterdam') {
+                        // Change the map view for Utrecht
+                        map.setView([51.9280632, 4.4084283], 12);
+                    }
+
+                    if (location === 'utrecht') {
+                        // Change the map view for Utrecht
+                        map.setView([52.0784901, 5.1140772], 12);
+                    }
+                    
+                });
+            });
+
     }); 
 </script>
 
@@ -90,8 +144,33 @@
     <aside id="infoPanel">
         <div id="infoContent">
             <div class="inner-content">
-                <span id="hide">Verbergen</span>
+                <span class="hide" id="hide">Verbergen</span>
                 <h2 id="infoTitle">[naam]</h2>
+
+                <p class="no-margin-bot">Extra informatie</p>
+                <div class="extra-info-container">
+                    <div class="extra-info-titles">
+                        <p>K-Waarde:</p>
+                        <p>50-75:</p>
+                        <p>&#60;25cm:</p>
+                        <p>25-50:</p>
+                        <p>75-100:</p>
+                        <p>100-150:</p>
+                        <p>&#62;150cm:</p>
+                        <p>Geometry:</p>
+                    </div>
+
+                    <div class="extra-info-values">
+                        <p id="value0">[waarde]</p>
+                        <p id="value1">[waarde]</p>
+                        <p id="value2">[waarde]</p>
+                        <p id="value3">[waarde]</p>
+                        <p id="value4">[waarde]</p>
+                        <p id="value5">[waarde]</p>
+                        <p id="value6">[waarde]</p>
+                        <p id="value7">[waarde]</p>
+                    </div>
+                </div>
             </div>
         </div>
     </aside>
@@ -108,7 +187,7 @@
     aside {
         background-color: #fdfdfdb3;
         height: 70vh;
-        width: 20rem;
+        max-width: 20rem;
         margin-left: 5%;
         margin-top: 1.5rem;
         padding: .5rem 1rem;
@@ -127,7 +206,7 @@
         height: 70vh;
     }
 
-    .inner-content span {
+    .hide {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -136,11 +215,37 @@
         color: #2B3F5A;
     }
 
-    .inner-content span:hover {
+    .hide:hover {
         color: #767676;
     }
 
     h2 {
         color: var(--spat);
+    }
+
+    .no-margin-bot {
+        margin-bottom: 0;
+        margin-top: 1rem;
+    }
+
+    .extra-info-container {
+        width: 100%;
+        display: flex;
+        padding-top: .5rem;
+        border-top: #8795aa 1px solid;
+    }
+
+    .extra-info-container p {
+        margin: 0;
+        padding: 0;
+    }
+
+    .extra-info-titles {
+        width: 50%;
+    }
+
+    .extra-info-values {
+        width: 50%;
+        text-align: right;
     }
 </style>
