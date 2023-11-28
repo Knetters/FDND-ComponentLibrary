@@ -18,7 +18,7 @@
 
         function toggleMenu() {
             if (menuToggled == false) {
-                mapMenu.style.width = "20%";
+                mapMenu.style.width = "20rem";
                 mapMenu.style.height = "3rem";
                 menuList.style.display = "none";
                 menuText.style.display = "none";
