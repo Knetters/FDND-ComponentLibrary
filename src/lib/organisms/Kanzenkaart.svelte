@@ -25,13 +25,12 @@
         const infoPanel = document.getElementById('infoPanel');
         const infoContent = document.getElementById('infoContent');
 
-        // Function to update the panel content based on marker data
-        function updateInfoPanel(data) {
-            infoContent.innerHTML = `
-                <h3>${data.properties.Naam}</h3>
-                <p>Other information: ${data.properties.OtherProperty}</p>
-                <!-- Add more properties as needed -->
-            `;
+        const infoTitle = document.getElementById('infoTitle');
+
+        document.getElementById('hide').addEventListener("click", hideInfo);
+
+        function hideInfo() {
+            infoPanel.style.display = "none";
         }
 
         // Fetching data and working with markers
@@ -44,11 +43,7 @@
 
                 // Function to update the panel content based on marker data
                 function updateInfoPanel(feature) {
-                    infoContent.innerHTML = `
-                        <h2>${feature.properties.Naam}</h2>
-                        <p>Other information: ${feature.properties.OtherProperty}</p>
-                        <!-- Add more properties as needed -->
-                    `;
+                    infoTitle.innerHTML = `${feature.properties.Naam}`;
                 }
 
                 // Looping through the features
@@ -94,8 +89,10 @@
 
     <aside id="infoPanel">
         <div id="infoContent">
-            <!-- Content will be dynamically updated here -->
-            <h2>[naam]</h2>
+            <div class="inner-content">
+                <span id="hide">Verbergen</span>
+                <h2 id="infoTitle">[naam]</h2>
+            </div>
         </div>
     </aside>
 </section>
@@ -122,5 +119,28 @@
         box-shadow: 0px 0px 10px 5px #9d9d9d4b;
         transition: .2s;
         display: none;
+    }
+
+    .inner-content {
+        position: relative;
+        width: 100%;
+        height: 70vh;
+    }
+
+    .inner-content span {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding-bottom: 1rem;
+        cursor: pointer;
+        color: #2B3F5A;
+    }
+
+    .inner-content span:hover {
+        color: #767676;
+    }
+
+    h2 {
+        color: var(--spat);
     }
 </style>
