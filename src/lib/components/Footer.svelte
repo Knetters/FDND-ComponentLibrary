@@ -48,7 +48,7 @@
 
 <style>
   h2 {
-    color: var(--spat);
+    color: white;
     font-size: 1.3rem;
   }
 

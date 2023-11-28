@@ -45,18 +45,14 @@ nav {
     text-align: center;
     padding: 20px 20px;
     text-decoration: none;
-    color: var(--darkblue);
+    color: var(--spat);
   }
 
   & li a span {
     color: white;
-    background-color: var(--green);
+    background-color: var(--darkblue);
     padding: .5em 1em;
   }
-
-    & li a:hover {
-      background-color: #f4f4f4;
-    }
 
     & .logo {
       width: 6rem;
