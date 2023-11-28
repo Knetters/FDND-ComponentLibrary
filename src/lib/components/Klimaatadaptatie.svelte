@@ -1,26 +1,32 @@
 <script>
 </script>
 
-<!-- Klimaat section -->
+.
 
+<!-- Klimaatsectie -->
 <div
   class="light-background"
 >
+  <!-- Eerste sectie -->
   <section
     class="first-section"
   >
     <div
       class="inner-section"
     >
+      <!-- Rij met horizontale flexbox -->
       <div
         class="horizontal-flex-row"
       >
+        <!-- Tekstcontainer -->
         <div
           class="text-container"
         >
+          <!-- Titel -->
           <h2>
             Klimaatadaptatie
           </h2>
+          <!-- Vetgedrukte tekst -->
           <p
             class="bold-text"
           >
@@ -28,8 +34,7 @@
             dan 60%
             van een
             gemeente
-            private
-            grond
+            privégrond
             is… dan
             is het
             noodzakelijk
@@ -39,6 +44,7 @@
             te
             maken.
           </p>
+          <!-- Algemene tekst -->
           <p>
             Ons
             vertrekpunt
@@ -50,8 +56,7 @@
             gemeente
             bestaat
             uit
-            private
-            grond
+            privégrond
             (tuinen,
             daken,
             bedrijventerreinen)
@@ -61,8 +66,7 @@
             noodzakelijk
             is dat
             deze
-            private
-            ruimte
+            privéruimte
             klimaatadaptief
             ingericht
             moet
@@ -79,12 +83,17 @@
             tuin in
             te gaan.
           </p>
-          <ul>
+          <!-- Ongeordende lijst -->
+          <ul
+            aria-labelledby="klimaatTitel"
+          >
+            <!-- Lijstitems -->
             <li>
+              <!-- Pijlpunt icoon -->
               <i
                 class="fa fa-arrow-right"
                 aria-hidden="true"
-              /> Hoe
+              ></i> Hoe
               los je
               dit probleem
               op?
@@ -93,7 +102,7 @@
               <i
                 class="fa fa-arrow-right"
                 aria-hidden="true"
-              /> Hoe
+              ></i> Hoe
               zet je
               subsidiestromen
               efficiënt
@@ -103,24 +112,28 @@
               <i
                 class="fa fa-arrow-right"
                 aria-hidden="true"
-              /> Hoe
+              ></i> Hoe
               activeer
               je bewoners?
             </li>
           </ul>
         </div>
+        <!-- Afbeeldingscontainer -->
         <div
           class="image-container"
         >
+          <!-- Afbeelding -->
           <img
             src="assets/projects1.png"
-            alt=""
+            alt="Afbeelding ter illustratie van Klimaatadaptatie"
+            loading="lazy"
           />
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Tweede sectie -->
   <section>
     <div
       class="inner-section"
@@ -134,7 +147,8 @@
           <img
             class="mobile-image"
             src="assets/projects4.png"
-            alt=""
+            alt="Afbeelding ter illustratie van Klimaatadaptatie"
+            loading="lazy"
           />
         </div>
         <div
@@ -210,6 +224,7 @@
     </div>
   </section>
 
+  <!-- Derde sectie -->
   <section>
     <div
       class="inner-section"
@@ -268,21 +283,22 @@
             te
             vergroenen.
           </p>
-          <ul>
+          <ul
+            aria-labelledby="klimaatTitel"
+          >
             <li>
               <i
                 class="fa fa-arrow-right"
                 aria-hidden="true"
-              /> Het
+              ></i> Het
               uitvoeren
-              van stakeholders/netwerk
-              analyses
+              van stakeholders/netwerkanalyses
             </li>
             <li>
               <i
                 class="fa fa-arrow-right"
                 aria-hidden="true"
-              /> Co-creatie
+              ></i> Co-creatie
               sessie
               organiseren
             </li>
@@ -290,7 +306,7 @@
               <i
                 class="fa fa-arrow-right"
                 aria-hidden="true"
-              /> Het
+              ></i> Het
               uitvoeren
               van restwaterscans
             </li>
@@ -298,7 +314,7 @@
               <i
                 class="fa fa-arrow-right"
                 aria-hidden="true"
-              /> Het
+              ></i> Het
               uitvoeren
               van klimaatanalyses
               en het
@@ -313,7 +329,8 @@
         >
           <img
             src="assets/verg.png"
-            alt=""
+            alt="Afbeelding ter illustratie van Klimaatadaptatie"
+            loading="lazy"
           />
         </div>
       </div>
@@ -339,10 +356,9 @@
   }
 
   .inner-section {
-    /* padding: 0rem 2.5rem; */
     width: 70%;
-    margin-left: 15%;
-    margin-bottom: 3rem;
+    margin: 0 auto
+      3rem auto;
   }
 
   h2 {
@@ -401,11 +417,9 @@
       width: 100%;
       object-fit: cover;
     }
-
     .mobile-image {
-      display: none;
+      display: block;
     }
-
     .inner-section {
       /* padding: 0rem 2.5rem; */
       width: 70%;

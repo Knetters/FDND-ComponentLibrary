@@ -282,7 +282,7 @@
     padding: 0;
     display: flex;
     margin: 2rem 0rem 1rem 0rem;
-    color: #2B3F5A;
+    color: var(--darkblue);
   }
 
   .filter-item-list li {
@@ -296,7 +296,7 @@
   }
 
   .active {
-    background-color: #4ECD5D;
+    background-color: var(--green);
     color: #FFFFFF;
     border-radius: .5rem;
   }
@@ -357,18 +357,18 @@
   }
 
   .project-list span {
-    color: #2B3F5A;
+    color: var(--darkblue);
     font-weight: 600;
     font-size: .9rem;
   }
 
   .project-list h3 {
-    color: #7FAEC5;
+    color: var(--spat);
     margin-bottom: .5rem;
   }
 
   .project-list p {
-    color: #2B3F5A;
+    color: var(--darkblue);
     font-size: .8rem;
     margin-bottom: .5rem;
     line-height: 1.2rem;
@@ -379,7 +379,7 @@
     right: 0;
     bottom: 0;
     padding: .6rem 1.2rem;
-    color: #73CA6A;
+    color: var(--green);
     transition: .2s;
   }
 
@@ -472,13 +472,13 @@
     }
 
     .mobile-porject-list span {
-      color: #2B3F5A;
+      color: var(--darkblue);
       font-weight: 600;
       font-size: .7rem;
     }
 
     .mobile-porject-list h3 {
-      color: #7FAEC5;
+      color: var(--spat);
       font-size: 1rem;
       line-height: 1.2rem;
       margin-bottom: .5rem;
@@ -509,7 +509,7 @@
       right: 0;
       bottom: 0;
       padding: .6rem 1.2rem;
-      color: #73CA6A;
+      color: var(--green);
     }
 }
 </style>

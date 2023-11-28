@@ -1,151 +1,159 @@
-<script>
-  import { onMount } from "svelte";
-
-  onMount(() => {
-    // nav toggle - select button and links
-    const navToggle = document.querySelector("#navToggle");
-    const nav = document.querySelector("#nav-links");
-
-    // add event listener
-    navToggle.addEventListener("click", () => {
-      nav.classList.toggle("nav-open");
-    });
-  });
-</script>
-
-<div class="navbar">
-  <div class="container flex-nav">
-    <div class="nav-header">
-      <img class="logo" src="/assets/logo_spatwater.png" alt="logo spatwater" />
-      <button class="nav-toggle" id="navToggle">
-        <i class="ri-menu-line" />
-      </button>
-    </div>
-    <nav class="nav-links" id="nav-links">
-      <ul>
-        <li class="nav-link"><a href="/">Home</a></li>
-        <li class="nav-link"><a href="/over">Over</a></li>
-        <li class="nav-link"><a href="/expertise">Expertise</a></li>
-        <li class="nav-link"><a href="/#projecten">Projecten</a></li>
-        <li class="nav-link"><a href="/#kennisbank">Kennisbank</a></li>
-        <li class="nav-link"><a href="/team">Team</a></li>
-        <li class="nav-link"><a href="/contact"><span>Contact</span></a></li>
-      </ul>
-    </nav>
-  </div>
+<nav>
+  <div class="navbar-container">
+  <img class="logo" src="/assets/logotest2.png" alt="logo spatwater" />
+  
+  <input class="menu-button" type="checkbox" id="menu-button" />
+  <label class="menu-icon" for="menu-button"><span class="bars"></span></label>
+  
+  <ul class="menu">
+    <li><a href="/over">Over</a></li>
+    <li><a href="/expertise">Expertise</a></li>
+    <li><a href="/#projecten">Projecten</a></li>
+    <li><a href="/#kennisbank">Kennisbank</a></li>
+    <li><a href="/team">Team</a></li>
+    <li><a href="/contact"><span>Contact</span></a></li>
+  </ul>
 </div>
+</nav>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
-
-  :root {
-    --spat: #7faec5;
-    --lg-bg: #fafafa;
-    --green: #4ecd5d;
-    --darkblue: #384b61;
+  
+  :global(:has(.navbar-container)){
+    container-type: inline-size;
   }
 
-  * {
-    box-sizing: border-box;
+/* Navigation */
+nav {
+  width: 100vw;
+  height: auto;
+  background-color: #fff;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100vw;
+  z-index: 999;
+
+    & ul {
     margin: 0;
     padding: 0;
-  }
-
-  .container {
-    max-width: 100vw;
-    margin: 0 auto;
-    padding: 0.8rem 2rem;
-  }
-
-  a {
-    color: var(--spat);
-    text-decoration: none;
-  }
-
-  .nav-link {
     list-style: none;
-    margin: 20px 0;
-    border-bottom: 2px solid black;
-    margin-left: 2rem;
-  }
-
-  /* Navbar */
-  .navbar {
-    background: white;
-    box-shadow: -1px 0 4px rgba(14, 55, 63, 0.15);
-    height: 4.5rem;
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-  }
-
-  .flex-nav {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .nav-header img {
-    width: 6.5rem;
-  }
-
-  .nav-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-toggle {
-    margin-top: 0.5rem;
-    border: transparent;
-    background: transparent;
-    color: var(--darkblue);
-    font-size: 1.5rem;
-  }
-
-  .nav-links {
-    height: 0;
     overflow: hidden;
+    background-color: #fff;
+    }
+
+    & li a {
+    display: block;
+    text-align: center;
+    padding: 1.25em 1.25em;
+    text-decoration: none;
+    color: var(--darkblue);
+    font-size: 1.3rem;
   }
 
-  /* .nav-open {
-    height: 100vh;
-  } */
+  & li a span {
+    color: white;
+    background-color: var(--green);
+    padding: .5em 1em;
+    border-radius: 5px;
+  }
 
-  @media only screen and (min-width: 900px) {
-    .nav-toggle {
-      display: none;
-    }
-
-    .nav-header {
-      display: block;
-    }
-
-    .flex-nav {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.3rem 2.5rem;
-    }
-
-    .nav-links {
+    & .logo {
+      width: 6rem;
       height: auto;
+      margin: 0.5rem 1rem;
     }
 
-    ul {
-      text-align: center;
+    & .menu {
+      clear: both;
+      height: 0;
+      transition: height .2s ease-out;
+    }
+  /* Icon */
+    & .menu-icon {
+      cursor: pointer;
+      float: right;
+      padding: 2rem 2rem;
+      position: relative;
+      user-select: none;
     }
 
-    .nav-link {
-      display: inline-block;
-      border-bottom: none;
+      & .menu-icon .bars{
+        background: #333;
+        display: block;
+        height: 2px;
+        position: relative;
+        transition: background .2s ease-out;
+        width: 18px;
+      }
+
+      & .menu-icon .bars:before, 
+        .menu-icon .bars:after {
+        background: #333;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
     }
 
-    .nav-links span {
-      background: var(--green);
-      color: white;
-      padding: 0.5rem 15px;
-      border-radius: 4px;
+      & .menu-icon .bars:before {
+        top: 5px;
+      }
+
+      & .menu-icon .bars:after {
+        top: -5px;
+      }
+
+    /* Checkbox */
+    & .menu-button {
+    display: none;
     }
+      & .menu-button:checked ~ .menu {
+      height: 100vh;
+      }
+
+      & .menu-button:checked ~ .menu-icon .bars {
+        background: transparent;
+      }
+
+      & .menu-button:checked ~ .menu-icon .bars:before {
+        transform: rotate(-45deg);
+      }
+
+      & .menu-button:checked ~ .menu-icon .bars:after {
+        transform: rotate(45deg);
+      }
+
+      & .menu-button:checked ~ .menu-icon:not(.steps) .bars:before,
+        .menu-button:checked ~ .menu-icon:not(.steps) .bars:after {
+        top: 0;
+      }
+}
+
+/* 48em = 768px */
+@container (min-width: 900px) {
+  nav li{
+    float: left;
   }
+
+  nav li a {
+    padding: 30px 20px;
+    font-size: 1.1rem;
+  }
+
+  nav .menu {
+    clear: none;
+    float: right;
+    height: auto; /* Adjusted to display the menu on desktop */
+  }
+
+  nav .menu-icon {
+    display: none;
+  }
+
+  nav .logo{
+    width: 8rem;
+    margin-top: .7rem;
+  }
+}
 </style>
