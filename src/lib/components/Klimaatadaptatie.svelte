@@ -1,6 +1,8 @@
 <script>
 </script>
 
+.
+
 <!-- Klimaatsectie -->
 <div
   class="light-background"

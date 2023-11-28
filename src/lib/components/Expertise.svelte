@@ -1,4 +1,5 @@
 <script>
+  import { ButtonExpertise } from "$lib/index.js"
 </script>
 
 <!-- Expertise-sectie -->
@@ -15,7 +16,6 @@
       Expertise
     </h2>
   </header>
-
   <!-- Wrapper voor de expertise cards -->
   <div
     class="expertise__wrapper"
@@ -33,18 +33,9 @@
       <h3>
         Klimaatadaptatie
       </h3>
-      <a
-        href="#klimaat"
-        class="button"
-        aria-label="Meer informatie over klimaatadaptatie"
-      >
-        <p
-          class="button_text2"
-        >
-          Meer
-          informatie
-        </p>
-      </a>
+
+      <ButtonExpertise
+      />
     </div>
 
     <!-- Waterkwaliteit card -->
@@ -60,18 +51,8 @@
       <h3>
         Waterkwaliteit
       </h3>
-      <a
-        href="#waterkwaliteit"
-        class="button"
-        aria-label="Meer informatie over waterkwaliteit"
-      >
-        <p
-          class="button_text2"
-        >
-          Meer
-          informatie
-        </p>
-      </a>
+      <ButtonExpertise
+      />
     </div>
 
     <!-- B-Rain card -->
@@ -87,18 +68,8 @@
       <h3>
         B-Rain
       </h3>
-      <a
-        href="#brain"
-        class="button"
-        aria-label="Meer informatie over B-Rain"
-      >
-        <p
-          class="button_text2"
-        >
-          Meer
-          informatie
-        </p>
-      </a>
+      <ButtonExpertise
+      />
     </div>
   </div>
 </section>
@@ -111,10 +82,6 @@
     flex-direction: column;
     position: relative;
   }
-
-  /* .expertise-header {
-    margin-left: 14rem;
-  } */
 
   .expertise-title {
     font-size: 1.6rem;
