@@ -21,53 +21,83 @@
             iconAnchor: [16, 32],
         });
 
+        // Reference to the info panel and its content area
+        const infoPanel = document.getElementById('infoPanel');
+        const infoContent = document.getElementById('infoContent');
+
+        // Function to update the panel content based on marker data
+        function updateInfoPanel(data) {
+            infoContent.innerHTML = `
+                <h3>${data.properties.Naam}</h3>
+                <p>Other information: ${data.properties.OtherProperty}</p>
+                <!-- Add more properties as needed -->
+            `;
+        }
+
+        // Fetching data and working with markers
         fetch('https://raw.githubusercontent.com/Knetters/FDND-ComponentLibrary/main/static/data/Bodem_Bunnik.geojson')
-        .then(response => response.json())
-        .then(data => {
-            // Looping through the features
-            data.features.forEach(feature => {
-                // Extracting coordinates
-                const coordinates = feature.geometry.coordinates;
+            .then(response => response.json())
+            .then(data => {
+                // Reference to the info panel and its content area
+                const infoPanel = document.getElementById('infoPanel');
+                const infoContent = document.getElementById('infoContent');
 
-                // Define the projection definitions for RD coordinates and WGS84 (latitude/longitude)
-                const rdProjection = '+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs';
-                const wgs84Projection = '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs';
+                // Function to update the panel content based on marker data
+                function updateInfoPanel(feature) {
+                    infoContent.innerHTML = `
+                        <h2>${feature.properties.Naam}</h2>
+                        <p>Other information: ${feature.properties.OtherProperty}</p>
+                        <!-- Add more properties as needed -->
+                    `;
+                }
 
-                // Define the initial RD coordinates
-                const rdCoordinates = [coordinates[0], coordinates[1]];
+                // Looping through the features
+                data.features.forEach(feature => {
+                    // Extracting coordinates
+                    const coordinates = feature.geometry.coordinates;
 
-                // Perform the conversion from RD to WGS84
-                const convertedCoordinates = proj4(rdProjection, wgs84Projection, rdCoordinates);
+                    // Define the projection definitions for RD coordinates and WGS84 (latitude/longitude)
+                    const rdProjection = '+proj=sterea +lat_0=52.15616055555555 +lon_0=5.38763888888889 +k=0.9999079 +x_0=155000 +y_0=463000 +ellps=bessel +units=m +no_defs';
+                    const wgs84Projection = '+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs';
 
-                // Extract latitude and longitude values
-                const [longitude, latitude] = convertedCoordinates;
+                    // Define the initial RD coordinates
+                    const rdCoordinates = [coordinates[0], coordinates[1]];
 
-                // Create a custom HTML element
-                const customElement = document.createElement('div');
-                customElement.innerHTML = `
-                    <h3>${feature.properties.Naam}</h3>
-                    <p>Other content here...</p>
-                `;
+                    // Perform the conversion from RD to WGS84
+                    const convertedCoordinates = proj4(rdProjection, wgs84Projection, rdCoordinates);
 
-                // Display the converted coordinates
-                console.log('Latitude:', latitude);
-                console.log('Longitude:', longitude);
+                    // Extract latitude and longitude values
+                    const [longitude, latitude] = convertedCoordinates;
 
-                var marker = L.marker([latitude, longitude], {
-                    icon: kansIcon
-                }).addTo(map).bindPopup(customElement);
+                    // Create a marker
+                    const marker = L.marker([latitude, longitude], {
+                        icon: kansIcon 
+                    }).addTo(map);
 
+                    // Event listener for marker click
+                    marker.on('click', function () {
+                        // Update the info panel content when a marker is clicked
+                        updateInfoPanel(feature);
+                        infoPanel.style.display = "block"
+                    });
+                });
+            })
+            .catch(error => {
+                console.log('Error fetching data:', error);
             });
-        })
-        .catch(error => {
-            console.log('Error fetching data:', error);
-        });
 
     }); 
 </script>
-  
+
 <section id="map">
     <MapMenu />
+
+    <aside id="infoPanel">
+        <div id="infoContent">
+            <!-- Content will be dynamically updated here -->
+            
+        </div>
+    </aside>
 </section>
   
 <style>
@@ -76,5 +106,21 @@
         width: 100vw;
         margin-top: 7vh;
         position: absolute;
+    }
+
+    aside {
+        background-color: #fdfdfdb3;
+        height: 70vh;
+        width: 20rem;
+        margin-left: 5%;
+        margin-top: 1.5rem;
+        padding: .5rem 1rem;
+        border-radius: 1rem;
+        position: relative;
+        z-index: 9999;
+        display: flex;
+        box-shadow: 0px 0px 10px 5px #9d9d9d4b;
+        transition: .2s;
+        display: none;
     }
 </style>
