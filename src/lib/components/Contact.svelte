@@ -1,17 +1,11 @@
 <script>
-  import { onMount } from "svelte";
-
-  onMount(() => {
-    console.log(data);
-  });
-
-  export let data;
   import { FormContact } from "$lib/index.js";
+  import { IntroContact } from "$lib/index.js";
+
 </script>
 
 <section class="contact">
-  <h2>Contact</h2>
-  <p>Voel je vrij om contact met ons op te nemen</p>
+  <IntroContact/>
   <section class="contact-section" id="experience">
     <div class="main-container">
       <FormContact />
@@ -21,26 +15,8 @@
 </section>
 
 <style>
-  section.contact {
-    padding: 2em;
-  }
 
-  img {
-    width: 90%;
-  }
-
-  h2 {
-    padding-top: 2rem;
-    color: var(--spat);
-  }
-
-  p {
-    margin-bottom: 1rem;
-    color: var(--darkblue);
-    font-size: 0.8rem;
-  }
-
-  /* FORMULIER */
+  /* CONTAINER CLASSES */
 
   .contact-section {
     container: sidebar / inline-size;
@@ -53,6 +29,15 @@
     height: auto;
     background-color: var(--lg-bg);
   }
+
+  section.contact {
+    padding: 2em;
+  }
+
+  img {
+    width: 90%;
+  }
+
 
   /* CONTAINER QUERIES */
   @container sidebar (min-width: 700px) {
