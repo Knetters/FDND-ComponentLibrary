@@ -15,35 +15,29 @@
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
         // L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}',).addTo(map);
 
-        // Loop trough the geojson data
         fetch('https://raw.githubusercontent.com/Knetters/FDND-ComponentLibrary/main/static/data/Bodem_Bunnik.geojson')
-        .then(response => response.json())
-        .then(data => {
-
-            // Looping through the features
-            data.features.forEach(feature => {
-
+    .then(response => response.json())
+    .then(data => {
+        // Looping through the features
+        data.features.forEach(feature => {
             // Extracting coordinates
             const coordinates = feature.geometry.coordinates;
 
-            console.log(coordinates)
-            
-            // Creating Leaflet circle
-            const circle = L.circle([coordinates[1], coordinates[0]], {
-                color: 'red', // Circle color
-                fillColor: '#f03', // Fill color
-                fillOpacity: 0.5, // Fill opacity
-                radius: 50 // Circle radius in meters
-            }).addTo(map); // Leaflet uses [lat, lng], GeoJSON uses [lng, lat]
-            
-            // You can customize circles or bind popups here
-            circle.bindPopup(`<b>${feature.properties.Naam}</b><br/>ID: ${feature.properties.id}`);
-            });
-        })
+            // Extracting GPS coordinates
+            let gpsLat = coordinates[1];
+            let gpsLong = coordinates[0];
 
-        .catch(error => {
-            console.log('Error fetching data:', error);
+            // Converting GPS coordinates to regular coordinates
+            let regularLat = gpsLong;
+            let regularLong = gpsLat;
+
+            // Your Leaflet.js implementation using regularLat and regularLong
+            L.marker([regularLat, regularLong]).addTo(map);
         });
+    })
+    .catch(error => {
+        console.log('Error fetching data:', error);
+    });
 
     }); 
 </script>
