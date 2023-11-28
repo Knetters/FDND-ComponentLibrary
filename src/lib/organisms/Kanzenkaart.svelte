@@ -16,7 +16,7 @@
         L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png',).addTo(map);
 
         var kansIcon = L.icon({
-            iconUrl: '/assets/brightness-svgrepo-com.png',
+            iconUrl: '/assets/star-svgrepo-com.png',
             iconSize: [32, 32],
             iconAnchor: [16, 32],
         });
@@ -95,7 +95,7 @@
     <aside id="infoPanel">
         <div id="infoContent">
             <!-- Content will be dynamically updated here -->
-            
+            <h2>[naam]</h2>
         </div>
     </aside>
 </section>
