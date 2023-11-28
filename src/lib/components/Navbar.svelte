@@ -1,6 +1,6 @@
 <nav>
   <div class="navbar-container">
-  <img class="logo" src="/assets/logo_spatwater.png" alt="logo spatwater" />
+  <img class="logo" src="/assets/logotest2.png" alt="logo spatwater" />
   
   <input class="menu-button" type="checkbox" id="menu-button" />
   <label class="menu-icon" for="menu-button"><span class="bars"></span></label>
@@ -45,13 +45,15 @@ nav {
     text-align: center;
     padding: 20px 20px;
     text-decoration: none;
-    color: var(--spat);
+    color: var(--darkblue);
+    font-size: 1.3rem;
   }
 
   & li a span {
     color: white;
-    background-color: var(--darkblue);
+    background-color: var(--green);
     padding: .5em 1em;
+    border-radius: 5px;
   }
 
     & .logo {
@@ -135,7 +137,8 @@ nav {
   }
 
   nav li a {
-    padding: 20px 20px;
+    padding: 30px 20px;
+    font-size: 1.1rem;
   }
 
   nav .menu {
@@ -146,6 +149,11 @@ nav {
 
   nav .menu-icon {
     display: none;
+  }
+
+  nav .logo{
+    width: 8rem;
+    margin-top: .7rem;
   }
 }
 </style>
