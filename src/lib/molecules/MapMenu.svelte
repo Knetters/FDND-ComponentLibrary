@@ -51,10 +51,10 @@
         <p id="min" class="menu-icon">Verbergen</p>
         <p id="plus" class="menu-icon">Opties</p>
         <ul id="menu-list">
-            <li>Filteroptie</li>
-            <li>Filteroptie</li>
-            <li>Filteroptie</li>
-            <li class="active">Filteroptie</li>
+            <li data-location="utrecht">Utrecht</li>
+            <li data-location="rotterdam">Rotterdam</li>
+            <li data-location="den-haag">Den-Haag</li>
+            <li class="active" data-location="amsterdam">Amsterdam</li>
         </ul>
     </div>
 </div>
@@ -122,8 +122,7 @@
     }
 
     .action-block ul li:hover {
-        background-color: #4ECD5D;
-        color: #fff;
+        background-color: #4ecd5d89;
     }
 
     .active {
@@ -138,5 +137,25 @@
 
     .menu-icon:hover {
         color: #767676;
+    }
+
+    /* Mobiele weergaven */
+    @media only screen and (max-width: 900px) {
+        .map-menu {
+            flex-direction: column;
+        }
+
+        .action-block {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .text-block {
+            width: 100%;
+        }
+
+        .menu-icon, .text-block p {
+            display: none;
+        }
     }
 </style>
