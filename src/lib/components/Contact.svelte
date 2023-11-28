@@ -102,6 +102,10 @@
     border-width: 1px;
   }
 
+  textarea {
+    height: 100px;
+  }
+
   input:focus,
   textarea:focus {
     opacity: 1;
@@ -143,6 +147,7 @@
   @container sidebar (min-width: 700px) {
     img {
       margin-left: 2em;
+      margin-top: -2em;
     }
   }
 
