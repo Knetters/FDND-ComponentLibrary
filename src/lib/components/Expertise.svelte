@@ -1,37 +1,109 @@
 <script>
 </script>
 
+<!-- Expertise-sectie -->
 <section
-  class="expertise section">
-  <h2 class="expertise-title">Expertise</h2>
+  class="expertise section"
+>
+  <!-- Header van de expertise-sectie -->
+  <header
+    class="expertise-header"
+  >
+    <h2
+      class="expertise-title"
+    >
+      Expertise
+    </h2>
+  </header>
 
-  <div class="expertise__wrapper">
-    <div class="expertise__card">
-      <img class="expertise3" src="assets/Untitled4.png" alt="Illustratie klimaatadaptatie"/>
-      <h3>Klimaatadaptatie</h3>
-      <a href="#klimaat" class="button">
-        <p class="button_text2">Meer informatie</p>
+  <!-- Wrapper voor de expertise cards -->
+  <div
+    class="expertise__wrapper"
+  >
+    <!-- Klimaatadaptatie card -->
+    <div
+      class="expertise__card"
+    >
+      <img
+        src="assets/Untitled4.png"
+        alt="Illustratie klimaatadaptatie voor een groenere wereld"
+        width="200px"
+        height="200px"
+      />
+      <h3>
+        Klimaatadaptatie
+      </h3>
+      <a
+        href="#klimaat"
+        class="button"
+        aria-label="Meer informatie over klimaatadaptatie"
+      >
+        <p
+          class="button_text2"
+        >
+          Meer
+          informatie
+        </p>
       </a>
     </div>
 
-    <div class="expertise__card">
-      <img class="expertise2" src="assets/Untitled3.png" alt="Illustratie waterkwaliteit"/>
-      <h3>Waterkwaliteit</h3>
-      <a href="#waterkwaliteit" class="button">
-        <p class="button_text2">Meer informatie</p>
+    <!-- Waterkwaliteit card -->
+    <div
+      class="expertise__card"
+    >
+      <img
+        src="assets/Untitled3.png"
+        alt="Illustratie waterkwaliteit en milieubehoud"
+        width="200px"
+        height="200px"
+      />
+      <h3>
+        Waterkwaliteit
+      </h3>
+      <a
+        href="#waterkwaliteit"
+        class="button"
+        aria-label="Meer informatie over waterkwaliteit"
+      >
+        <p
+          class="button_text2"
+        >
+          Meer
+          informatie
+        </p>
       </a>
     </div>
-    
-    <div class="expertise__card">
-      <img class="expertise2" src="assets/brainlogo.png" alt="Illustratie B-Rain"/>
-      <h3> B-Rain</h3>
-      <a href="#brain" class="button">
-        <p class="button_text2">Meer informatie</p>
+
+    <!-- B-Rain card -->
+    <div
+      class="expertise__card"
+    >
+      <img
+        src="assets/brainlogo.png"
+        alt="Illustratie B-Rain, een innovatieve oplossing"
+        width="200px"
+        height="200px"
+      />
+      <h3>
+        B-Rain
+      </h3>
+      <a
+        href="#brain"
+        class="button"
+        aria-label="Meer informatie over B-Rain"
+      >
+        <p
+          class="button_text2"
+        >
+          Meer
+          informatie
+        </p>
       </a>
     </div>
   </div>
 </section>
 
+<!-- Styles voor de Expertise-sectie -->
 <style>
   .expertise {
     background-color: white;
@@ -40,16 +112,21 @@
     position: relative;
   }
 
+  /* .expertise-header {
+    margin-left: 14rem;
+  } */
+
   .expertise-title {
-    font-size: 1.5rem;
-    color: var(--spat);
+    font-size: 1.6rem;
+    color: var(
+      --spat
+    );
     font-weight: 600;
-    text-align: left;
-    margin-left: 2.5rem;
+    text-align: center;
   }
 
   .expertise h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: var(
       --darkblue
     );
@@ -60,34 +137,24 @@
 
   .expertise__wrapper {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 4rem 2rem; 
-    gap: 3rem;
-
-    /* display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    padding: 6rem 6rem; 
-    gap: 1rem; */
-
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    padding: 4rem; */
+    justify-content: space-evenly;
+    padding: 4rem
+      10rem;
+    gap: 2rem;
   }
 
   .expertise__card {
-    margin: 0 auto;
-    height: 25em;
-    width: 18em;
+    height: 22em;
+    width: 15em;
     border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     box-shadow: 0
-      4px 6px
+      8px 10px
       rgba(
         174,
         190,
@@ -100,13 +167,15 @@
     color: var(
       --darkblue
     );
-    transition: 0.3s
-      ease-in;
+    transition: transform
+      0.3s ease-in;
+    cursor: pointer;
   }
 
   .expertise__card
     img {
-    width: 250px;
+    /* width: 250px; */
+    /* height: 250px; */
     padding-bottom: 2em;
   }
   .expertise__card
@@ -115,13 +184,10 @@
     padding-top: 1em;
     padding-bottom: 0.5em;
   }
+
   .expertise__card:nth-child(
       2
-    ) {
-    background-color: var(
-      --lg-bg
-    );
-  }
+    ),
   .expertise__card:nth-child(
       3
     ) {
@@ -138,7 +204,6 @@
       ease-in;
     cursor: pointer;
   }
-
   .button {
     display: inline-block;
     background-color: var(
@@ -161,18 +226,24 @@
     color: white;
     font-size: 1rem;
   }
-
-  @media screen and (min-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     .expertise__wrapper {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 4rem 8rem; 
-    gap: 3rem;
+      flex-direction: column;
+      padding: 4rem
+        2rem;
+    }
+
+    .expertise__card {
+      width: 100%;
+      max-width: 300px;
+    }
   }
 
-  .expertise-title{
-    margin-left: 14rem;
+  /* Media query for mobile screens */
+  @media screen and (max-width: 767px) {
+    .expertise__card {
+      height: auto;
+      padding: 2rem;
+    }
   }
-  }
-
 </style>
