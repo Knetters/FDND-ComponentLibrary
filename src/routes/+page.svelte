@@ -20,7 +20,9 @@
 <Home />
 <Over />
 <Expertise />
-<Klimaatadaptatie />
+<Klimaatadaptatie
+  {data}
+/>
 <Waterkwaliteit />
 <Brain />
 <Projecten {data} />
