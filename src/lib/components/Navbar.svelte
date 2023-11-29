@@ -43,7 +43,7 @@ nav {
     & li a {
     display: block;
     text-align: center;
-    padding: 20px 20px;
+    padding: 1.25em 1.25em;
     text-decoration: none;
     color: var(--darkblue);
     font-size: 1.3rem;
