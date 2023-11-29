@@ -48,8 +48,9 @@
 
 <style>
   h2 {
-    color: var(--spat);
+    color: white;
     font-size: 1.3rem;
+    padding-bottom: 1rem;
   }
 
   h3 {
@@ -74,6 +75,8 @@
     text-decoration: none;
     color: white;
     cursor: pointer;
+    padding-bottom: .5rem;
+    font-size: .9rem;
   }
 
   section {
