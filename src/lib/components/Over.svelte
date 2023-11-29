@@ -1,20 +1,97 @@
 <script>
+  import { ButtonOver } from "$lib/index.js"
 </script>
 
 <!--==================== ABOUT ====================-->
-<section class="climate-container">
-  <div class="inner-section">
-    <div class="horizontal-flex-row">
-      <div class="text-container">
-        <h2>Over SPATwater</h2>
-        <p>SPATwater bestaat uit een nieuwe generatie enthousiaste hydrologen die met een technische achtergrond nét wat anders kijken naar ruimtelijke opgaven. De uitdagingen zijn enorm, maar de kansen die het biedt nog groter.</p>
-        <p>Met expertise op het gebied van waterkwaliteit, de Kaderrichtlijn Water en klimaatadaptatie helpt SPATwater overheden en bedrijven om toekomstbestendig en waterrobuust te worden.</p>
-        <p>Wij voeren geen analyse uit zonder handelingsperspectief en bieden zowel creatieve als praktische oplossingen.</p>
+<section
+  class="climate-container"
+>
+  <div
+    class="inner-section"
+  >
+    <div
+      class="horizontal-flex-row"
+    >
+      <div
+        class="text-container"
+      >
+        <h2>
+          Over
+          SPATwater
+        </h2>
+        <p>
+          SPATwater
+          bestaat
+          uit een
+          nieuwe
+          generatie
+          enthousiaste
+          hydrologen
+          die met
+          een
+          technische
+          achtergrond
+          nét wat
+          anders
+          kijken
+          naar
+          ruimtelijke
+          opgaven.
+          De
+          uitdagingen
+          zijn
+          enorm,
+          maar de
+          kansen die
+          het biedt
+          nog
+          groter.
+        </p>
+        <p>
+          Met
+          expertise
+          op het
+          gebied van
+          waterkwaliteit,
+          de
+          Kaderrichtlijn
+          Water en
+          klimaatadaptatie
+          helpt
+          SPATwater
+          overheden
+          en
+          bedrijven
+          om
+          toekomstbestendig
+          en
+          waterrobuust
+          te worden.
+        </p>
+        <p>
+          Wij voeren
+          geen
+          analyse
+          uit zonder
+          handelingsperspectief
+          en bieden
+          zowel
+          creatieve
+          als
+          praktische
+          oplossingen.
+        </p>
 
-        <a href="#expertise" class="button">Onze expertise</a>
+        <ButtonOver
+        />
       </div>
-      <div class="image-container">
-        <img src="assets/tree.png" alt="boom illustratie" />
+      <div
+        class="image-container"
+      >
+        <img
+          src="assets/tree.png"
+          alt="boom illustratie"
+        />
       </div>
     </div>
   </div>
@@ -26,7 +103,9 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
     margin-bottom: 5rem;
-    background: var(--lg-bg);
+    background: var(
+      --lg-bg
+    );
   }
 
   .inner-section {
@@ -37,7 +116,9 @@
 
   h2 {
     padding: 0rem;
-    color: var(--spat);
+    color: var(
+      --spat
+    );
     margin-bottom: 1rem;
   }
 
@@ -54,7 +135,7 @@
   img {
     height: 20rem;
     object-fit: contain;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     width: 100%;
   }
 

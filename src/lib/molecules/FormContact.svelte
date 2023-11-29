@@ -1,51 +1,43 @@
-    <script>
+<script>
   import { ButtonContact } from "$lib/index.js";
 </script>
 
+<form
+  action="mailto:maaike.verplancke@hotmail.com"
+  method="post"
+  enctype="text/plain"
+>
+  <label for="name">Voor- en achternaam*</label>
+  <input type="text" id="name" name="name" required placeholder="Jan dekkers" />
 
+  <label for="email">E-mail*</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    required
+    placeholder="Jandekkers@hotmail.com"
+  />
 
-  <form
-        action="mailto:maaike.verplancke@hotmail.com"
-        method="post"
-        enctype="text/plain"
-      >
-        <label for="name">Voor- en achternaam*</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          placeholder="Jan dekkers"
-        />
-
-        <label for="email">E-mail*</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          placeholder="Jandekkers@hotmail.com"
-        />
-
-        <label for="message">Notitie*</label>
-        <textarea
-          id="message"
-          name="message"
-          rows="4"
-          required
-          placeholder="Opmerking..."
-        ></textarea>
-<ButtonContact />
-      </form>
+  <label for="message">Notitie*</label>
+  <textarea
+    id="message"
+    name="message"
+    rows="4"
+    required
+    placeholder="Opmerking..."
+  ></textarea>
+  <ButtonContact />
+</form>
 
 <style>
-form {
+  form {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-label {
+  label {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
     color: var(--darkblue);
@@ -84,5 +76,4 @@ label {
     color: #cccccc;
     font-style: italic;
   }
-
 </style>

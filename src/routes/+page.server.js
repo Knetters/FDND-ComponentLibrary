@@ -55,9 +55,55 @@ export async function load() {
         name
         title
       }
+      klimaatadaptaties {
+        boldText {
+          text
+        }
+        content {
+          text
+        }
+        lijst {
+          text
+        }
+        image {
+          id
+          url
+        }
+        title
+      }
+      bedrijventerreinens {
+        boldTekst {
+          text
+        }
+        content {
+          text
+        }
+        image {
+          id
+          url
+        }
+        title
+        lijst {
+          text
+        }
+      }
+      gemeentens {
+        boldTekst {
+          text
+        }
+        content {
+          text
+        }
+        image {
+          id
+          url
+        }
+        title
+      }
     }
-  `; 
+  `;
+
+
   
   return await hygraph.request(query)
-}
-
+  }

@@ -1,4 +1,4 @@
-        <button type="submit" onclick="sendEmail()">Verstuur</button>
+        <button type="submit">Verstuur</button>
 
 <style>
   button {
