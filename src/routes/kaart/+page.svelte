@@ -1,11 +1,11 @@
 <script>
-  import Kanzenkaart from "$lib/organisms/Kanzenkaart.svelte";
+  import Kansenkaart from "$lib/organisms/Kansenkaart.svelte";
 </script>
 
 <svelte:head>
-  <title>SPATwater - Kanzenkaart</title>
+  <title>SPATwater - Kansenkaart</title>
 </svelte:head>
 
 <main>
-  <Kanzenkaart />
+  <Kansenkaart />
 </main>
