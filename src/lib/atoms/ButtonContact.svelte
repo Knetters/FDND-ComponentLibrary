@@ -1,4 +1,4 @@
-        <button type="submit">Verstuur</button>
+<button class="button" type="submit">Verstuur</button>
 
 <style>
   button {
