@@ -44,7 +44,7 @@
 
 <div id="map-menu" class="map-menu">
     <div class="text-block">
-        <h1>Kanzenkaart</h1>
+        <h1>Kansenkaart</h1>
         <p id="menu-text">Kleine regel tekst met uitleg over de kaart</p>
     </div>
     <div class="action-block">
