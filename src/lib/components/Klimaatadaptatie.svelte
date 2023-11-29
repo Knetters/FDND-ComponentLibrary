@@ -25,28 +25,28 @@
             <p
               class="bold-text"
             >
-              {klimaat
+              {@html klimaat
                 .boldText
-                .text}
+                .html}
             </p>
             <p>
-              {klimaat
+              {@html klimaat
                 .content
-                .text}
+                .html}
             </p>
             <ul
               aria-labelledby="klimaatTitel"
             >
-              <li>
-                <i
-                  class="fa fa-arrow-right"
-                  aria-hidden="true"
+              {#each klimaat.lijst as item}
+                <li>
+                  <i
+                    class="fa fa-arrow-right"
+                    aria-hidden="true"
 
-                ></i>
-                {klimaat
-                  .lijst
-                  .text}
-              </li>
+                  ></i>
+                  {item}
+                </li>
+              {/each}
             </ul>
           </div>
           <div
@@ -109,7 +109,6 @@
     </div>
   </section>
 {/each}
-
 {#each data.bedrijventerreinens as bedrijf}
   <section>
     <div
@@ -127,27 +126,28 @@
           <p
             class="bold-text"
           >
-            {bedrijf
+            {@html bedrijf
               .boldTekst
-              .text}
+              .html}
           </p>
           <p>
-            {bedrijf
+            {@html bedrijf
               .content
-              .text}
+              .html}
           </p>
           <ul
             aria-labelledby="klimaatTitel"
           >
-            <li>
-              <i
-                class="fa fa-arrow-right"
-                aria-hidden="true"
-              ></i>
-              {bedrijf
-                .lijst
-                .text}
-            </li>
+            {#each bedrijf.list as item}
+              <li>
+                <i
+                  class="fa fa-arrow-right"
+                  aria-hidden="true"
+
+                ></i>
+                {item}
+              </li>
+            {/each}
           </ul>
         </div>
         <div

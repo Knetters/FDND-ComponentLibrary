@@ -6,33 +6,48 @@
 <!-- <section class="sponsor section">
   <div class="sponsor__container container grid"> -->
 
-    <div class="scroll-horizontal">      
-      {#each data.partner as partner}
-      <a href={partner.link}>
-        <img src={partner.image.url} alt="logo's partners" class="sponsor-img"/></a>
-    {/each}
-  </div>
+<div
+  class="scroll-horizontal"
+>
+  {#each data.partner as partner}
+    <a
+      href={partner.link}
+    >
+      <img
+        src={partner
+          .image
+          .url}
+        alt="logo's partners"
+        class="sponsor-img"
+      /></a
+    >
+  {/each}
+</div>
 
-  <!-- </div>
+<!-- </div>
 </section> -->
 
 <style>
   .scroll-horizontal {
     overflow-x: auto;
-    display:flex;
+    display: flex;
     align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 2rem;
-    scroll-snap-type: x mandatory;
-    padding:1rem 1rem;
-}
+    scroll-snap-type: x
+      mandatory;
+    padding: 1rem
+      1rem;
+  }
 
   .sponsor-img {
     width: 100px;
     height: auto;
     opacity: 0.5;
-    filter: invert(0.5);
+    filter: invert(
+      0.5
+    );
     transition: 0.3s;
   }
 
@@ -41,7 +56,9 @@
     .sponsor-img {
       width: 100px;
       opacity: 0.5;
-      filter: invert(0.7);
+      filter: invert(
+        0.7
+      );
       transition: 0.3s;
     }
   }
@@ -49,11 +66,11 @@
     .sponsor-img {
       width: 150px;
     }
-      
-  .scroll-horizontal {
-    gap: 8rem;
-    padding:5rem 5rem;
-}
-  }
 
+    .scroll-horizontal {
+      gap: 8rem;
+      padding: 5rem
+        5rem;
+    }
+  }
 </style>

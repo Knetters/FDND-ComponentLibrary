@@ -27,8 +27,7 @@
       <img
         src="assets/Untitled4.png"
         alt="Illustratie klimaatadaptatie voor een groenere wereld"
-        width="200px"
-        height="200px"
+        class="card-img"
       />
       <h3>
         Klimaatadaptatie
@@ -45,8 +44,7 @@
       <img
         src="assets/Untitled3.png"
         alt="Illustratie waterkwaliteit en milieubehoud"
-        width="200px"
-        height="200px"
+        class="card-img"
       />
       <h3>
         Waterkwaliteit
@@ -62,8 +60,7 @@
       <img
         src="assets/brainlogo.png"
         alt="Illustratie B-Rain, een innovatieve oplossing"
-        width="200px"
-        height="200px"
+        class="card-img"
       />
       <h3>
         B-Rain
@@ -82,7 +79,10 @@
     flex-direction: column;
     position: relative;
   }
-
+  .card-img {
+    width: 100%;
+    height: 100%;
+  }
   .expertise-title {
     font-size: 1.6rem;
     color: var(

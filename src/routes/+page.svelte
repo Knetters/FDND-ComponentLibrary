@@ -18,7 +18,7 @@
 
 <Navbar />
 <Home />
-<Over />
+<Over {data} />
 <Expertise />
 <Klimaatadaptatie
   {data}

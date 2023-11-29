@@ -1,101 +1,50 @@
 <script>
   import { ButtonOver } from "$lib/index.js"
+  export let data
+  console.log(data)
 </script>
 
 <!--==================== ABOUT ====================-->
-<section
-  class="climate-container"
->
-  <div
-    class="inner-section"
+{#each data.overs as item}
+  <section
+    class="climate-container"
   >
     <div
-      class="horizontal-flex-row"
+      class="inner-section"
     >
       <div
-        class="text-container"
+        class="horizontal-flex-row"
       >
-        <h2>
-          Over
-          SPATwater
-        </h2>
-        <p>
-          SPATwater
-          bestaat
-          uit een
-          nieuwe
-          generatie
-          enthousiaste
-          hydrologen
-          die met
-          een
-          technische
-          achtergrond
-          nét wat
-          anders
-          kijken
-          naar
-          ruimtelijke
-          opgaven.
-          De
-          uitdagingen
-          zijn
-          enorm,
-          maar de
-          kansen die
-          het biedt
-          nog
-          groter.
-        </p>
-        <p>
-          Met
-          expertise
-          op het
-          gebied van
-          waterkwaliteit,
-          de
-          Kaderrichtlijn
-          Water en
-          klimaatadaptatie
-          helpt
-          SPATwater
-          overheden
-          en
-          bedrijven
-          om
-          toekomstbestendig
-          en
-          waterrobuust
-          te worden.
-        </p>
-        <p>
-          Wij voeren
-          geen
-          analyse
-          uit zonder
-          handelingsperspectief
-          en bieden
-          zowel
-          creatieve
-          als
-          praktische
-          oplossingen.
-        </p>
+        <div
+          class="text-container"
+        >
+          <h2>
+            {item.title}
+          </h2>
+          <p>
+            {@html item
+              .content
+              .html}
+          </p>
 
-        <ButtonOver
-        />
-      </div>
-      <div
-        class="image-container"
-      >
-        <img
-          src="assets/tree.png"
-          alt="boom illustratie"
-        />
+          <ButtonOver
+          />
+        </div>
+        <div
+          class="image-container"
+        >
+          <img
+            src={item
+              .image
+              .url}
+            alt="boom illustratie"
+            loading="lazy"
+          />
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+{/each}
 
 <style>
   section {

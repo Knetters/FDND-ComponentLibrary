@@ -57,14 +57,18 @@ export async function load() {
       }
       klimaatadaptaties {
         boldText {
+          raw
+          html
+          markdown
           text
         }
         content {
+          raw
+          html
+          markdown
           text
         }
-        lijst {
-          text
-        }
+        lijst 
         image {
           id
           url
@@ -73,9 +77,15 @@ export async function load() {
       }
       bedrijventerreinens {
         boldTekst {
+          raw
+          html
+          markdown
           text
         }
         content {
+          raw
+          html
+          markdown
           text
         }
         image {
@@ -83,15 +93,33 @@ export async function load() {
           url
         }
         title
-        lijst {
-          text
-        }
+        list
+        
       }
       gemeentens {
         boldTekst {
+          raw
+          html
+          markdown
           text
         }
         content {
+          raw
+          html
+          markdown
+          text
+        }
+        image {
+          id
+          url
+        }
+        title
+      }
+      overs {
+        content {
+          raw
+          html
+          markdown
           text
         }
         image {
