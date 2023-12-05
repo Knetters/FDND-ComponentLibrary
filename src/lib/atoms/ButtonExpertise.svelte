@@ -1,39 +1,16 @@
-<script>
-</script>
-
-<a
-  href="#brain"
-  class="button"
-  aria-label="Meer informatie"
->
-  <p
-    class="button_text2"
-  >
-    Meer informatie
-  </p>
-</a>
+<a href="/">Meer informatie</a>
 
 <style>
-  .button {
-    display: inline-block;
-    background-color: var(
-      --green
-    );
+
+  a {
+    background-color: var(--green);
     color: white;
-    padding: 0.7rem
-      1rem;
-    height: 50px;
-    border-radius: 5px;
-    font-weight: var(
-      --font-semi-bold
-    );
-    transition: 0.3s;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-semi-bold);
+    transition: 0.2s;
     text-decoration: none;
+    margin-bottom: 1rem;
   }
 
-  .button_text2 {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-  }
 </style>

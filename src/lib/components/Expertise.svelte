@@ -1,72 +1,47 @@
 <script>
-  import { ButtonExpertise } from "$lib/index.js"
+  import { ButtonExpertise } from "$lib/index.js";
 </script>
 
 <!-- Expertise-sectie -->
-<section
-  class="expertise section"
->
+<section class="expertise section">
   <!-- Header van de expertise-sectie -->
-  <header
-    class="expertise-header"
-  >
-    <h2
-      class="expertise-title"
-    >
-      Expertise
-    </h2>
+  <header class="expertise-header">
+    <h2 class="expertise-title">Expertise</h2>
   </header>
   <!-- Wrapper voor de expertise cards -->
-  <div
-    class="expertise__wrapper"
-  >
+  <div class="expertise__wrapper">
     <!-- Klimaatadaptatie card -->
-    <div
-      class="expertise__card"
-    >
+    <div class="expertise__card">
       <img
         src="assets/Untitled4.png"
         alt="Illustratie klimaatadaptatie voor een groenere wereld"
         class="card-img"
       />
-      <h3>
-        Klimaatadaptatie
-      </h3>
+      <h3>Klimaatadaptatie</h3>
 
-      <ButtonExpertise
-      />
+      <ButtonExpertise />
     </div>
 
     <!-- Waterkwaliteit card -->
-    <div
-      class="expertise__card"
-    >
+    <div class="expertise__card">
       <img
         src="assets/Untitled3.png"
         alt="Illustratie waterkwaliteit en milieubehoud"
         class="card-img"
       />
-      <h3>
-        Waterkwaliteit
-      </h3>
-      <ButtonExpertise
-      />
+      <h3>Waterkwaliteit</h3>
+      <ButtonExpertise />
     </div>
 
     <!-- B-Rain card -->
-    <div
-      class="expertise__card"
-    >
+    <div class="expertise__card">
       <img
         src="assets/brainlogo.png"
         alt="Illustratie B-Rain, een innovatieve oplossing"
         class="card-img"
       />
-      <h3>
-        B-Rain
-      </h3>
-      <ButtonExpertise
-      />
+      <h3>B-Rain</h3>
+      <ButtonExpertise />
     </div>
   </div>
 </section>
@@ -85,18 +60,14 @@
   }
   .expertise-title {
     font-size: 1.6rem;
-    color: var(
-      --spat
-    );
+    color: var(--spat);
     font-weight: 600;
-    text-align: center;
+    margin-left: 15%;
   }
 
   .expertise h3 {
     font-size: 1.2rem;
-    color: var(
-      --darkblue
-    );
+    color: var(--darkblue);
     font-weight: 600;
     text-align: center;
     padding-bottom: 1em;
@@ -106,98 +77,49 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 4rem
-      10rem;
-    gap: 2rem;
+    justify-content: space-between;
+    padding: 6rem 0rem;
+    gap: 1rem;
+    width: 70%;
+    margin-left: 15%;
   }
 
   .expertise__card {
     height: 22em;
     width: 15em;
-    border-radius: 4px;
+    border-radius: .5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0
-      8px 10px
-      rgba(
-        174,
-        190,
-        205,
-        0.3
-      );
-    background-color: var(
-      --lg-bg
-    );
-    color: var(
-      --darkblue
-    );
-    transition: transform
-      0.3s ease-in;
+    box-shadow: 0 8px 10px rgba(174, 190, 205, 0.3);
+    background-color: var(--lg-bg);
+    color: var(--darkblue);
+    transition: transform 0.3s ease-in;
     cursor: pointer;
   }
 
-  .expertise__card
-    img {
+  .expertise__card img {
     /* width: 250px; */
     /* height: 250px; */
     padding-bottom: 2em;
   }
-  .expertise__card
-    .expertise2 {
-    width: 250px;
-    padding-top: 1em;
-    padding-bottom: 0.5em;
-  }
 
-  .expertise__card:nth-child(
-      2
-    ),
-  .expertise__card:nth-child(
-      3
-    ) {
-    background-color: var(
-      --lg-bg
-    );
+  .expertise__card:nth-child(2),
+  .expertise__card:nth-child(3) {
+    background-color: var(--lg-bg);
   }
 
   .expertise__card:hover {
-    transform: scale(
-      1.075
-    );
-    transition: 0.3s
-      ease-in;
+    transform: scale(1.075);
+    transition: 0.2s;
     cursor: pointer;
   }
-  .button {
-    display: inline-block;
-    background-color: var(
-      --green
-    );
-    color: white;
-    padding: 0.7rem
-      1rem;
-    height: 50px;
-    border-radius: 5px;
-    font-weight: var(
-      --font-semi-bold
-    );
-    transition: 0.3s;
-    text-decoration: none;
-  }
 
-  .button_text2 {
-    text-decoration: none;
-    color: white;
-    font-size: 1rem;
-  }
   @media screen and (max-width: 1023px) {
     .expertise__wrapper {
       flex-direction: column;
-      padding: 4rem
-        2rem;
+      padding: 4rem 2rem;
     }
 
     .expertise__card {
