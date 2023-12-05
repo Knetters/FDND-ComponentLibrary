@@ -59,8 +59,6 @@
       <div id="text">
         <h1 class="home-title">Een nieuwe generatie hydrologen</h1>
         <h2><span class="home-content">Concreet op water en bodem</span></h2>
-        <h3 class="home-scroll">scroll<span class="material-symbols-outlined">arrow_downward</span>
-        </h3>
       </div>
       <img src="assets/grondmobilee.png" id="ground" alt="grond illustratie" />
       <img src="assets/bird.png" id="bird" alt="vogel illustratie" />
@@ -77,7 +75,6 @@
       <div id="text2">
         <h1 class="home-title2">Een nieuwe generatie hydrologen</h1>
         <span class="home-content2">Concreet op water en bodem</span>
-        <h3 class="home-scroll2">scroll<span class="material-symbols-outlined">arrow_downward</span></h3>
       </div>
       <img
         src="assets/backgroundfullfinall.png"

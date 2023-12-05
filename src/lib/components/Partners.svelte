@@ -1,21 +1,15 @@
 <script>
-  export let data
+  export let data;
 </script>
 
 <!-- <section class="sponsor section">
   <div class="sponsor__container container grid"> -->
 
-<div
-  class="scroll-horizontal"
->
+<div class="scroll-horizontal">
   {#each data.partner as partner}
-    <a
-      href={partner.link}
-    >
+    <a href={partner.link}>
       <img
-        src={partner
-          .image
-          .url}
+        src={partner.image.url}
         alt="logo's partners"
         class="sponsor-img"
       /></a
@@ -34,19 +28,15 @@
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 2rem;
-    scroll-snap-type: x
-      mandatory;
-    padding: 1rem
-      1rem;
+    scroll-snap-type: x mandatory;
+    padding: 1rem 1rem;
   }
 
   .sponsor-img {
     width: 100px;
     height: auto;
     opacity: 0.5;
-    filter: invert(
-      0.5
-    );
+    filter: invert(0.5);
     transition: 0.3s;
   }
 
@@ -55,9 +45,7 @@
     .sponsor-img {
       width: 100px;
       opacity: 0.5;
-      filter: invert(
-        0.7
-      );
+      filter: invert(0.7);
       transition: 0.3s;
     }
   }
@@ -68,8 +56,7 @@
 
     .scroll-horizontal {
       gap: 8rem;
-      padding: 5rem
-        5rem;
+      padding: 5rem 5rem;
     }
   }
 </style>

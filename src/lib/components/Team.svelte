@@ -84,6 +84,8 @@
 <style>
   section {
     background: white;
+    width: 70%;
+    margin-left: 15%;
   }
 
   .team2 {
