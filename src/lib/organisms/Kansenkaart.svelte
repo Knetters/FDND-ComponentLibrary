@@ -140,14 +140,6 @@
 </script>
 
 <section id="map">
-    <nav>
-        <div class="nav-container">
-            <div class="logo-container">
-                <img class="logo" src="/assets/logotest2.png" alt="logo spatwater" />
-            </div>
-            <a href="/">Terug naar home</a>
-        </div>
-    </nav>
     <MapMenu />
     <MapAside />
 </section>
@@ -157,42 +149,5 @@
         height: 100vh;
         width: 100vw;
         position: absolute;
-    }
-
-    nav {
-        height: 5rem;
-        width: 100%;
-        position: relative;
-        background-color: #FEFEFE;
-        z-index: 9999;
-        box-shadow: 0px 0px 10px 5px #9d9d9d4b;
-    }
-
-    .nav-container {
-        width: 90%;
-        display: flex;
-        margin-left: 5%;
-    }
-
-    .logo-container {
-        width: 50%;
-    }
-
-    .logo {
-        height: 3rem;
-        margin-top: 1rem;
-    }
-
-    a {
-        width: 50%;
-        text-align: right;
-        font-size: 1rem;
-        margin-top: 1.6rem;
-        text-decoration: none;
-        color: #2B3F5A;
-    }
-
-    a:hover {
-        color: #767676;
     }
 </style>

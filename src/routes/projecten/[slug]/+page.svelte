@@ -1,7 +1,6 @@
 <script>
     export let data;
-  
-    import Navbar from "$lib/components/Navbar.svelte";
+    
     import Footer from "$lib/components/Footer.svelte";
 
 </script>
@@ -9,8 +8,6 @@
   <svelte:head>
     <title>SPATwater - {data.project.title}</title>
   </svelte:head>
-  
-  <Navbar />
 
   <main>
     {#if data.project}

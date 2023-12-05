@@ -1,7 +1,6 @@
 <script>
   import { ButtonOver } from "$lib/index.js"
   export let data
-  console.log(data)
 </script>
 
 <!--==================== ABOUT ====================-->

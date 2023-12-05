@@ -16,7 +16,6 @@
   });
 
 export let data
-console.log (data)
 </script>
 
 <section class="team section">

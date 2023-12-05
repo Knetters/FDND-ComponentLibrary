@@ -1,5 +1,6 @@
 <script>
   export let data
+  import { onMount } from 'svelte';
 
   import Navbar from "../lib/components/Navbar.svelte"
   import Home from "../lib/components/Home.svelte"
@@ -14,22 +15,26 @@
   import Contact from "../lib/components/Contact.svelte"
   import Partners from "../lib/components/Partners.svelte"
   import Footer from "../lib/components/Footer.svelte"
+
+  onMount(() => {
+
+  });
+
 </script>
 
-<Navbar />
-<Home />
-<Over {data} />
-<Expertise />
-<Klimaatadaptatie
-  {data}
-/>
-<Waterkwaliteit />
-<Brain />
-<Projecten {data} />
-<Kennisbank
-  {data}
-/>
-<Team {data} />
-<Contact />
-<Partners {data} />
-<Footer />
+  <Home />
+  <Over {data} />
+  <Expertise />
+  <Klimaatadaptatie {data} />
+  <Waterkwaliteit />
+  <Brain />
+  <Projecten {data} />
+  <Kennisbank {data} />
+  <Team {data} />
+  <Contact />
+  <Partners {data} />
+  <Footer />
+
+<style>
+  
+</style>

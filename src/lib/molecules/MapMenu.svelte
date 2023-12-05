@@ -65,7 +65,7 @@
         height: 5rem;
         width: 90%;
         margin-left: 5%;
-        margin-top: 1.5rem;
+        margin-top: 6.5rem;
         padding: .5rem 1rem;
         border-radius: 1rem;
         position: relative;

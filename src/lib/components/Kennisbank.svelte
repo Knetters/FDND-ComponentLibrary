@@ -1,8 +1,6 @@
 <script>
   export let data;
 
-  console.log(data);
-
   // Get the last post from the array
 
   let lastPost1 = data.kennisbanks[data.kennisbanks.length - 1];
