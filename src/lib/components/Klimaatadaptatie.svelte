@@ -1,60 +1,34 @@
 <script>
-  export let data
+  export let data;
 </script>
 
 {#each data.klimaatadaptaties as klimaat}
-  <div
-    class="light-background"
-  >
-    <section
-      class="first-section"
-    >
-      <div
-        class="inner-section"
-      >
-        <div
-          class="horizontal-flex-row"
-        >
-          <div
-            class="text-container"
-          >
+  <div class="light-background">
+    <section class="first-section">
+      <div class="inner-section">
+        <div class="horizontal-flex-row">
+          <div class="text-container">
             <h2>
               {klimaat.title}
             </h2>
-            <p
-              class="bold-text"
-            >
-              {@html klimaat
-                .boldText
-                .html}
+            <p class="bold-text">
+              {@html klimaat.boldText.html}
             </p>
             <p>
-              {@html klimaat
-                .content
-                .html}
+              {@html klimaat.content.html}
             </p>
-            <ul
-              aria-labelledby="klimaatTitel"
-            >
+            <ul aria-labelledby="klimaatTitel">
               {#each klimaat.lijst as item}
                 <li>
-                  <i
-                    class="fa fa-arrow-right"
-                    aria-hidden="true"
-
-                  ></i>
+                  <i class="fa fa-arrow-right" aria-hidden="true"></i>
                   {item}
                 </li>
               {/each}
             </ul>
           </div>
-          <div
-            class="image-container"
-          >
-            <img
-              src={klimaat
-                .image
-                .url}
+          <div class="image-container">
+            <img class="left-img"
+              src={klimaat.image.url}
               alt="Afbeelding ter illustratie van Klimaatadaptatie"
               loading="lazy"
             />
@@ -67,41 +41,25 @@
 
 {#each data.gemeentens as gemeenten}
   <section>
-    <div
-      class="inner-section"
-    >
-      <div
-        class="horizontal-flex-row"
-      >
-        <div
-          class="image-container"
-        >
+    <div class="inner-section">
+      <div class="horizontal-flex-row">
+        <div class="image-container">
           <img
             class="mobile-image"
-            src={gemeenten
-              .image
-              .url}
+            src={gemeenten.image.url}
             alt="Afbeelding ter illustratie van Klimaatadaptatie"
             loading="lazy"
           />
         </div>
-        <div
-          class="text-container"
-        >
+        <div class="text-container">
           <h2>
             {gemeenten.title}
           </h2>
-          <p
-            class="bold-text"
-          >
-            {gemeenten
-              .boldTekst
-              .text}
+          <p class="bold-text">
+            {gemeenten.boldTekst.text}
           </p>
           <p>
-            {gemeenten
-              .content
-              .text}
+            {gemeenten.content.text}
           </p>
         </div>
       </div>
@@ -110,52 +68,30 @@
 {/each}
 {#each data.bedrijventerreinens as bedrijf}
   <section>
-    <div
-      class="inner-section"
-    >
-      <div
-        class="horizontal-flex-row"
-      >
-        <div
-          class="text-container"
-        >
+    <div class="inner-section">
+      <div class="horizontal-flex-row">
+        <div class="text-container">
           <h2>
             {bedrijf.title}
           </h2>
-          <p
-            class="bold-text"
-          >
-            {@html bedrijf
-              .boldTekst
-              .html}
+          <p class="bold-text">
+            {@html bedrijf.boldTekst.html}
           </p>
           <p>
-            {@html bedrijf
-              .content
-              .html}
+            {@html bedrijf.content.html}
           </p>
-          <ul
-            aria-labelledby="klimaatTitel"
-          >
+          <ul aria-labelledby="klimaatTitel">
             {#each bedrijf.list as item}
               <li>
-                <i
-                  class="fa fa-arrow-right"
-                  aria-hidden="true"
-
-                ></i>
+                <i class="fa fa-arrow-right" aria-hidden="true"></i>
                 {item}
               </li>
             {/each}
           </ul>
         </div>
-        <div
-          class="image-container"
-        >
+        <div class="image-container left">
           <img
-            src={bedrijf
-              .image
-              .url}
+            src={bedrijf.image.url}
             alt="Afbeelding ter illustratie van Klimaatadaptatie"
             loading="lazy"
           />
@@ -168,11 +104,8 @@
 <style>
   section {
     width: 100%;
-    background: var(
-      --lg-bg
-    );
-    padding: 1rem
-      0rem 2rem 0rem;
+    background: var(--lg-bg);
+    padding: 1rem 0rem 2rem 0rem;
   }
 
   .first-section {
@@ -180,26 +113,20 @@
   }
 
   .light-background {
-    background: var(
-      --lg-bg
-    );
-    padding: 1rem
-      0rem 2rem 0rem;
+    background: var(--lg-bg);
+    padding: 1rem 0rem 2rem 0rem;
   }
 
   .inner-section {
     width: 70%;
-    margin: 0 auto
-      3rem auto;
+    margin: 0 auto 3rem auto;
   }
 
   h2 {
     padding: 0rem;
-    color: var(
-      --spat
-    );
+    color: var(--spat);
     margin-bottom: 1rem;
-    /* margin-top: 3rem; */
+    margin-top: 3rem;
   }
 
   .bold-text {
@@ -209,9 +136,7 @@
   ul {
     list-style: none;
     font-size: 0.8rem;
-    color: var(
-      --darkblue
-    );
+    color: var(--darkblue);
   }
 
   .horizontal-flex-row {
@@ -225,7 +150,7 @@
   }
 
   img {
-    height: 20rem;
+    width: 25rem;
     object-fit: cover;
     border-radius: 0.5rem;
   }

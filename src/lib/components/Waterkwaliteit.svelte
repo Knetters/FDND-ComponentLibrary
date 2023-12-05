@@ -8,7 +8,7 @@
             <div class="image-container">
                 <h2>Waterkwaliteit</h2>
                 <p class="bold-text">Wat betekent de Kaderrichtlijn Water voor jou?</p>
-                <img src="assets/Aquathermie.png" alt="foto aquathermie">
+                <img src="assets/Octopus-amico.svg" alt="foto aquathermie">
             </div>
             <div class="text-container">
                 <p>De Kaderrichtlijn Water (KRW) is een Europese richtlijn die regelt dat oppervlaktewateren en het grondwater van voldoende kwaliteit zijn. Toch voldoen pas enkele wateren aan deze norm. We staan nu op een keerpunt. Binnen 5 jaar, in 2027, moeten alle oppervlaktewateren en ons grondwater voldoen aan de KRW. Vergelijkingen met de stikstofcrisis zijn snel gemaakt, maar de KRW biedt ook kansen in proposities, aanbestedingen en vergunningverlening.</p>
