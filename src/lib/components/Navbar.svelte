@@ -11,7 +11,7 @@
       <li><a href="/#projecten">Projecten</a></li>
       <li><a href="/#team">Team</a></li>
       <li><a href="/kennisbank">Kennisbank</a></li>
-      <li><a href="/kansenkaart">Kansenkaart</a></li>
+      <li><a href="/kaart">Kansenkaart</a></li>
       <li><a href="/#contact"><span>Contact</span></a></li>
     </ul>
   </div>
