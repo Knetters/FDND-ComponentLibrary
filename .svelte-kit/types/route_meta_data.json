@@ -5,6 +5,9 @@
 	"/kaart": [
 		"src/routes/kaart/+page.server.js"
 	],
+	"/kennisbank": [
+		"src/routes/kennisbank/+page.server.js"
+	],
 	"/post/[slug]": [
 		"src/routes/post/[slug]/+page.server.js"
 	],

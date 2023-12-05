@@ -42,7 +42,13 @@
         <li>B-RAIN</li>
       </ul>
 
-      <input class="searchbar" type="search" id="search" name="search" placeholder="Zoek een project"/>
+      <input
+        class="searchbar"
+        type="search"
+        id="search"
+        name="search"
+        placeholder="Zoek een project"
+      />
     </div>
 
     <div class="filter-row">
@@ -69,35 +75,29 @@
 
   <div class="blog-view-container">
     <div class="latest">
-
-      
       <article class="main-post">
-       
         {#if data.kennisbanks.length > 0}
-          
-        <img src={lastPost1.image.url} alt="" />
+          <img src={lastPost1.image.url} alt="" />
 
           <div class="content-field">
             <span class="category">{lastPost1.categorie}</span>
-            <span class="author">Door {lastPost1.author} op {lastPost1.date}</span>
+            <span class="author"
+              >Door {lastPost1.author} op {lastPost1.date}</span
+            >
             <h3>{lastPost1.title}</h3>
-           <div class="hygraph-html">
+            <div class="hygraph-html">
               {@html lastPost1.content.html}
             </div>
 
             <div class="read-more-container">
-              <a class="read-more-link" href="/post/{lastPost1.slug}">Verder lezen</a>
+              <a class="read-more-link" href="/post/{lastPost1.slug}"
+                >Verder lezen</a
+              >
             </div>
           </div>
         {/if}
       </article>
-    
-    
-    
-    
     </div>
-
-
 
     <div class="blog2">
       <article class="main-post2">
@@ -106,7 +106,9 @@
 
           <div class="content-field2">
             <span class="category2">{lastPost2.categorie}</span>
-            <span class="author2">Door {lastPost2.author} op {lastPost2.date}</span>
+            <span class="author2"
+              >Door {lastPost2.author} op {lastPost2.date}</span
+            >
           </div>
 
           <h3>{lastPost2.title}</h3>
@@ -116,7 +118,9 @@
           </div>
 
           <div class="read-more-container2">
-            <a class="read-more-link2" href="/post/{lastPost2.slug}">Verder lezen</a>
+            <a class="read-more-link2" href="/post/{lastPost2.slug}"
+              >Verder lezen</a
+            >
           </div>
         {/if}
       </article>
@@ -138,11 +142,13 @@
           <h3>{lastPost3.title}</h3>
 
           <div class="hygraph-html3">
-          {@html lastPost3.content.html}
+            {@html lastPost3.content.html}
           </div>
 
           <div class="read-more-container3">
-            <a class="read-more-link3" href="/post/{lastPost3.slug}">Verder lezen</a>
+            <a class="read-more-link3" href="/post/{lastPost3.slug}"
+              >Verder lezen</a
+            >
           </div>
         {/if}
       </article>
@@ -151,7 +157,6 @@
     <div class="bloglist">
       <article class="blog">
         <div class="set-max-height">
-
           <div class="blog-list-container">
             <ul class="blog-list">
               {#each data.kennisbanks as post}
@@ -163,17 +168,23 @@
                       <div class="blog-info-row">
                         <span class="category">{post.categorie}</span>
 
-                        <span class="author">Door {post.author} op {post.date}</span>
+                        <span class="author"
+                          >Door {post.author} op {post.date}</span
+                        >
                       </div>
 
                       <h3>{post.title}</h3>
 
                       <p class="intro-text">
-                        Het is tijd om Nederlanders bewust te maken van de hoeveelheid regenwater op- en rondom het huis. Onze oplossing is het grootschalig inzetten vanmicro-maatregelen.
+                        Het is tijd om Nederlanders bewust te maken van de
+                        hoeveelheid regenwater op- en rondom het huis. Onze
+                        oplossing is het grootschalig inzetten
+                        vanmicro-maatregelen.
                       </p>
 
                       <a class="read-more-small" href="/post/{post.slug}">
-                        <i class="fa fa-arrow-right" aria-hidden="true"/></a>
+                        <i class="fa fa-arrow-right" aria-hidden="true" /></a
+                      >
                     </div>
                   </li>
                 </a>
@@ -190,7 +201,7 @@
   /* Styling main elements */
 
   h2 {
-    padding-top: 6rem;
+    padding-top: 2rem;
     color: var(--spat);
   }
 
@@ -394,7 +405,6 @@
     gap: 3rem;
   }
 
-
   .author {
     position: absolute;
     font-size: 0.6rem !important;
@@ -451,7 +461,8 @@
     margin: 0;
   }
 
-  .main-post2 img, .main-post3 img {
+  .main-post2 img,
+  .main-post3 img {
     margin: 0;
   }
 
