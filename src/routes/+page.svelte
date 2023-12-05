@@ -16,21 +16,7 @@
   import Footer from "../lib/components/Footer.svelte"
 
   onMount(() => {
-    function clickEffect(e) {
-  var clickDiv = document.createElement("div");
-
-  clickDiv.className = "clickEffect";
-  clickDiv.style.top = e.clientY + "px";
-  clickDiv.style.left = e.clientX + "px";
-
-  document.body.appendChild(clickDiv);
-  
-  clickDiv.onanimationend = function() {
-    clickDiv.parentElement.removeChild(clickDiv);
-  };
-}
-
-document.addEventListener("click", clickEffect);
+    
   });
 
 </script>
