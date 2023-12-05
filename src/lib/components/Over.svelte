@@ -1,44 +1,25 @@
 <script>
-  import { ButtonOver } from "$lib/index.js"
-  export let data
+  import { ButtonOver } from "$lib/index.js";
+  export let data;
 </script>
 
 <!--==================== ABOUT ====================-->
 {#each data.overs as item}
-  <section
-    class="climate-container"
-  >
-    <div
-      class="inner-section"
-    >
-      <div
-        class="horizontal-flex-row"
-      >
-        <div
-          class="text-container"
-        >
+  <section class="climate-container">
+    <div class="inner-section">
+      <div class="horizontal-flex-row">
+        <div class="text-container">
           <h2>
             {item.title}
           </h2>
           <p>
-            {@html item
-              .content
-              .html}
+            {@html item.content.html}
           </p>
 
-          <ButtonOver
-          />
+          <ButtonOver />
         </div>
-        <div
-          class="image-container"
-        >
-          <img
-            src={item
-              .image
-              .url}
-            alt="boom illustratie"
-            loading="lazy"
-          />
+        <div class="image-container">
+          <img src={item.image.url} alt="boom illustratie" loading="lazy" />
         </div>
       </div>
     </div>
@@ -51,9 +32,7 @@
     padding-top: 5rem;
     padding-bottom: 5rem;
     margin-bottom: 5rem;
-    background: var(
-      --lg-bg
-    );
+    background: var(--lg-bg);
   }
 
   .inner-section {
@@ -64,15 +43,14 @@
 
   h2 {
     padding: 0rem;
-    color: var(
-      --spat
-    );
+    color: var(--spat);
     margin-bottom: 1rem;
   }
 
   .horizontal-flex-row {
     width: 100%;
     display: flex;
+    justify-content: space-between;
     gap: 10%;
   }
 
