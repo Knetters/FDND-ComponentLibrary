@@ -14,8 +14,6 @@
       },
     });
   });
-
-export let data
 </script>
 
 <section class="team section">
@@ -87,7 +85,6 @@ export let data
 
 <style>
   section {
-    height: 100vh;
     background: white;
   }
 
